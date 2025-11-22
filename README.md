@@ -102,14 +102,10 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 
-3. Possible Enhancements
+## 3. Possible Enhancements
   - Sound detection instead of Piezo → uses microphone, detects gunshot noise
-
   - Multiple modes → e.g., timer, team kills, statistics
-
   - Save to file / SD card → persist shot counts
-
   - Bluetooth or Wi-Fi → live stats or remote monitoring
-
   - Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
 
