@@ -34,6 +34,8 @@ sudo apt install python3-pip
 pip3 install RPi.GPIO
 pip3 install adafruit-circuitpython-ssd1306
 pip3 install adafruit-circuitpython-busdevice
+```
+
 Basic Logic
 Initialization
 
@@ -54,6 +56,7 @@ Display Update
 OLED shows shot count, possibly mode or timer
 
 Python Example (Basic)
+```bash
 python
 Code kopieren
 import time
@@ -100,6 +103,8 @@ try:
 
 except KeyboardInterrupt:
     GPIO.cleanup()
+```
+
 3. Possible Enhancements
 Sound detection instead of Piezo → uses microphone, detects gunshot noise
 
@@ -110,13 +115,4 @@ Save to file / SD card → persist shot counts
 Bluetooth or Wi-Fi → live stats or remote monitoring
 
 Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
-
-yaml
-Code kopieren
-
----
-
-If you want, I can also make a **GitHub-ready version with diagrams and badges** to make it look professional in your repo.  
-
-Do you want me to do that?
 
