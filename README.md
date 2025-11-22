@@ -31,6 +31,9 @@ Python is recommended (works on Linux, supports GPIO/I²C, many libraries for SS
 ```bash
 sudo apt update
 sudo apt install python3-pip
+python3 -m venv env --system-site-packages
+# You will need to activate the virtual environment every time the Pi is rebooted. To activate it:
+source env/bin/activate
 pip3 install RPi.GPIO
 pip3 install adafruit-circuitpython-ssd1306
 pip3 install adafruit-circuitpython-busdevice
