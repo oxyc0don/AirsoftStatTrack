@@ -1,10 +1,9 @@
 # Airsoft Stattrack
-
-Ein Stattrack für Airsoft auf Basis eines Raspberry Pi, SSD1306 OLED Displays,
-Buttons und einem Schuss-Sensor.
+A stat-tracking system for Airsoft based on a Raspberry Pi, an SSD1306 OLED display, buttons, and a shot sensor.
 
 ## Features
-- Schusszähler
-- Magazinverwaltung
-- OLED Anzeige
-- Button-Steuerung
+
+- Shot counter
+- Magazine management
+- OLED display output
+- Button control
