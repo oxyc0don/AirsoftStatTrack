@@ -109,3 +109,48 @@ except KeyboardInterrupt:
   - Bluetooth or Wi-Fi → live stats or remote monitoring
   - Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
 
+## 4. Wiring SSD1306
+
+SSD1306 → Raspberry Pi 5 Wiring Plan (I²C)
+The Raspberry Pi 5 uses the same 40-pin header as previous models, including the I²C pins.
+Your SSD1306 I²C display typically has 4 pins:
+
+SSD1306 Pin	Raspberry Pi 5 Pin	Function
+VCC	Pin 1 (3.3V)	Power supply for OLED
+GND	Pin 6 (Ground)	Ground
+SCL	Pin 5 (GPIO 3 / SCL1)	I²C Clock
+SDA	Pin 3 (GPIO 2 / SDA1)	I²C Data
+Detailed Wiring Table (Copy for GitHub)
+# SSD1306 to Raspberry Pi 5 Wiring (I²C)
+
+| SSD1306 Pin | Raspberry Pi 5 Pin | GPIO | Description         |
+|-------------|--------------------|-------|---------------------|
+| VCC         | Pin 1              | 3.3V  | Power for display   |
+| GND         | Pin 6              | GND   | Ground              |
+| SCL         | Pin 5              | GPIO 3 (SCL1) | I²C Clock |
+| SDA         | Pin 3              | GPIO 2 (SDA1) | I²C Data  |
+
+Raspberry Pi 5 I²C Notes
+
+I²C is disabled by default. Enable it here:
+Settings → Raspberry Pi Configuration → Interfaces → I²C → Enable
+or via terminal:
+```
+sudo raspi-config
+```
+After enabling, reboot the Pi:
+
+```
+sudo reboot
+```
+
+Verify the Display is Detected
+
+Once wired and I²C enabled:
+```
+sudo apt install -y i2c-tools
+i2cdetect -y 1
+```
+
+You should see the SSD1306 appear as 0x3C or 0x3D in the grid.
+
