@@ -36,24 +36,21 @@ pip3 install adafruit-circuitpython-ssd1306
 pip3 install adafruit-circuitpython-busdevice
 ```
 
-Basic Logic
-Initialization
+### Basic Logic
 
-Initialize display
+#### Initialization 
 
-Initialize GPIOs for buttons and sensor
+  - Initialize display
+  - Initialize GPIOs for buttons and sensor
 
-Main Loop
+#### Main Loop
 
-Check sensor for shot detection
+  - Check sensor for shot detection
+  - If triggered → increment shot count and update display
+  - Check buttons (e.g., Reset, Start/Stop, Mode)
 
-If triggered → increment shot count and update display
-
-Check buttons (e.g., Reset, Start/Stop, Mode)
-
-Display Update
-
-OLED shows shot count, possibly mode or timer
+#### Display Update
+  - OLED shows shot count, possibly mode or timer
 
 Python Example (Basic)
 ```bash
@@ -106,13 +103,13 @@ except KeyboardInterrupt:
 ```
 
 3. Possible Enhancements
-Sound detection instead of Piezo → uses microphone, detects gunshot noise
+  - Sound detection instead of Piezo → uses microphone, detects gunshot noise
 
-Multiple modes → e.g., timer, team kills, statistics
+  - Multiple modes → e.g., timer, team kills, statistics
 
-Save to file / SD card → persist shot counts
+  - Save to file / SD card → persist shot counts
 
-Bluetooth or Wi-Fi → live stats or remote monitoring
+  - Bluetooth or Wi-Fi → live stats or remote monitoring
 
-Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
+  - Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
 
