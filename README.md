@@ -53,9 +53,7 @@ pip3 install adafruit-circuitpython-busdevice
   - OLED shows shot count, possibly mode or timer
 
 Python Example (Basic)
-```bash
-python
-Code kopieren
+```python
 import time
 import board
 import digitalio
