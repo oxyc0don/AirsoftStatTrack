@@ -123,7 +123,7 @@ Your SSD1306 I²C display typically has 4 pins:
 | SCL         | Pin 5              | GPIO 3 (SCL1) | I²C Clock |
 | SDA         | Pin 3              | GPIO 2 (SDA1) | I²C Data  |
 
-![image info](./pics/RPi5_pinout.png)
+![image info](./RPi5/images/RPi5_pinout.png)
 
 Raspberry Pi 5 I²C Notes
 
