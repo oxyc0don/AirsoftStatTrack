@@ -103,14 +103,7 @@ except KeyboardInterrupt:
     GPIO.cleanup()
 ```
 
-## 3. Possible Enhancements
-  - Sound detection instead of Piezo → uses microphone, detects gunshot noise
-  - Multiple modes → e.g., timer, team kills, statistics
-  - Save to file / SD card → persist shot counts
-  - Bluetooth or Wi-Fi → live stats or remote monitoring
-  - Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
-
-##  4. SSD1306 to Raspberry Pi 5 Wiring (I²C)
+##  3. SSD1306 to Raspberry Pi 5 Wiring (I²C)
 
 SSD1306 → Raspberry Pi 5 Wiring Plan (I²C)
 The Raspberry Pi 5 uses the same 40-pin header as previous models, including the I²C pins.
@@ -149,4 +142,31 @@ i2cdetect -y 1
 
 You should see the SSD1306 appear as 0x3C or 0x3D in the grid.
 
+### Testing SSD1306 using Luma Repo
+
+The Luma GitHub page also includes a number of cool examples to run, allowing you to learn how to create even funny animations. Not all the provided examples will work with our SSD1306 OLED display, but there are a lot to try.
+
+Before using them we need to install git:
+```
+sudo apt install git -y
+```
+Luma examples will also require some additional packages to install:
+```
+sudo apt install python3-dev python3-pip python3-numpy libfreetype6-dev libjpeg-dev build-essential libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev libsdl2-ttf-dev libportmidi-dev -y
+sudo apt install git -y
+```
+
+Now, you will find the examples to run by entering the related folder from your Raspberry PI storage:
+```
+cd luma.examples/examples/
+python matrix.py
+```
+Test if output appears...
+
+## 4. Possible Enhancements
+  - Sound detection instead of Piezo → uses microphone, detects gunshot noise
+  - Multiple modes → e.g., timer, team kills, statistics
+  - Save to file / SD card → persist shot counts
+  - Bluetooth or Wi-Fi → live stats or remote monitoring
+  - Next steps: Create a full wiring diagram and enhance software for debounce, multiple buttons, and mode switching.
 
